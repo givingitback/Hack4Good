@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "UploadFile";
+}
+
+<h2>Emotion Game - Charity</h2>
+
+
+
+@using (Html.BeginForm("UploadBlob", "Blobs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+<div>
+
+    <h4>Please upload your best selfie to participate in the Charity Emotion Game - "Contempt"</h4>
+
+    @Html.TextBox("file", "", new { type = "file" }) <br />
+
+    <input type="submit" value="Upload" />
+
+    @ViewBag.Message
+
+    <h3 style="color:red">Happy Emotion Game will end in 4 mins 10 secs...</h3>
+</div>
+
+
+}
+

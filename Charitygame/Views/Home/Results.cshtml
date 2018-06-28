@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Results for Happy Emotion Game</h2>
+
+
+@using (Html.BeginForm("GetList", "Blobs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    <div>
+
+    <input type="submit" value="Refresh" />
+
+    <div>
+        @*<table>
+            <tr>
+                <td>
+                    <img style="" src="<>" />
+                </td>
+                <td>
+                    <h2 style="color:blue;">Winner for the "Most Disgusted Emotion Selfie"!!!</h2>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>*@
+        <h1 style="text-align: center;">Your friend, "Gordon Byers" has won with the most contemptuous selfie!</h1>
+        <p style="text-align: center;"><img src="<img>" width="600" height="630" /></p>
+        <h3 style="text-align: center;">&nbsp;</h3>
+        <h3 style="text-align: center;color:blue">Thanks for your &pound;10 donation.</h3>
+        <h3 style="text-align: center;color:blue">You've raised &pound;50 for his chosen charity,<br />"Fashion for Solution Architects"</h3>
+    </div>
+
+
+    @*@model IEnumerable<Charitygame.Models.Game>
+
+    @foreach (var gm in Model)
+    {
+        @gm.id <br />
+        @gm.name <br />
+        @gm.sentiment_type_name <br />
+        @gm.startDate <br />
+
+        @ViewBag.Message
+    }*@
+
+
+    </div>
+    
+}
